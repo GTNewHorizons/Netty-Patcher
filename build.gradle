@@ -13,10 +13,14 @@ buildscript {
         }
 		maven {
 			url = "https://plugins.gradle.org/m2/"
-		}
+		}		        
+	maven {
+            name = "jitpack.io"
+            url = "https://jitpack.io"
+        }
     }
     dependencies {
-        classpath 'com.github.GTNewHorizons:ForgeGradle:1.2.4'
+       	classpath 'com.github.GTNewHorizons:ForgeGradle:1.2.4'
     }
 }
 
