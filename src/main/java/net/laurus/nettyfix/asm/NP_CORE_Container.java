@@ -9,6 +9,7 @@ import cpw.mods.fml.common.DummyModContainer;
 import cpw.mods.fml.common.LoadController;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.versioning.ArtifactVersion;
+import net.laurus.nettyfix.NettyPatch;
 
 public class NP_CORE_Container extends DummyModContainer {
 
@@ -22,6 +23,7 @@ public class NP_CORE_Container extends DummyModContainer {
 		meta.credits = "Roll Credits ...";
 		meta.authorList = Arrays.asList("LunarLaurus");
 		meta.description = "Makes Netty a bit safer.";
+		meta.parent = NettyPatch.NAME;
 		meta.url = "";
 		meta.updateUrl = "";
 		meta.screenshots = new String[0];

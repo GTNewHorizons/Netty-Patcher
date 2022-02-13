@@ -8,7 +8,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.laurus.nettyfix.utils.Logger;
 
-@Mod(modid = NettyPatch.MODID, name = NettyPatch.NAME, version = NettyPatch.VERSION, dependencies = "")
+@Mod(modid = NettyPatch.MODID, name = NettyPatch.NAME, version = NettyPatch.VERSION)
 public class NettyPatch {	
 	
 	public static final String MODID = "NettyPatch";

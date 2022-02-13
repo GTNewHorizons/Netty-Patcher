@@ -1,0 +1,22 @@
+{
+  "modListVersion": 2,
+  "modList": [{
+    "modid": "${modId}",
+    "name": "${modName}",
+    "description": "Makes Netty a bit safer.",
+    "version": "${modVersion}",
+    "mcversion": "${minecraftVersion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [ "LunarLaurus" ]
+  }, {
+    "modid": "${modId}_ASM",
+    "name": "${modName}_ASM",
+    "description": "Makes Netty a bit safer.",
+    "version": "${modVersion}",
+    "mcversion": "${minecraftVersion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [ "LunarLaurus" ]
+  }]
+}
