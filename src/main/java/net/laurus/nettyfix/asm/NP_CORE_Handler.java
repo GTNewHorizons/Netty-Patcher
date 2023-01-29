@@ -5,16 +5,14 @@ import net.minecraft.launchwrapper.IClassTransformer;
 
 public class NP_CORE_Handler implements IClassTransformer {
 
-	public byte[] transform(String name, String transformedName, byte[] basicClass) {
+    public byte[] transform(String name, String transformedName, byte[] basicClass) {
 
-		// Patch Poppet Shelf to enable/disable chunk loading
-		if (transformedName.equals("io.netty.bootstrap.Bootstrap")) {
-			return new ClassTransformer_Netty_Bootstrap(transformedName, basicClass).getWriter().toByteArray();
-		}
+        // Patch Poppet Shelf to enable/disable chunk loading
+        if (transformedName.equals("io.netty.bootstrap.Bootstrap")) {
+            return new ClassTransformer_Netty_Bootstrap(transformedName, basicClass).getWriter().toByteArray();
+        }
 
-		return basicClass;
-	}
-
-
+        return basicClass;
+    }
 
 }
