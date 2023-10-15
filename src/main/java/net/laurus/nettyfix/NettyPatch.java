@@ -1,28 +1,30 @@
 package net.laurus.nettyfix;
 
-import static net.laurus.nettyfix.utils.Logger.logger;
+import java.util.Collections;
 
-import net.laurus.nettyfix.utils.Logger;
+import com.google.common.eventbus.EventBus;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.DummyModContainer;
+import cpw.mods.fml.common.LoadController;
+import cpw.mods.fml.common.ModMetadata;
 
-@Mod(modid = NettyPatch.MODID, name = NettyPatch.NAME, version = NettyPatch.VERSION)
-public class NettyPatch {
+public class NettyPatch extends DummyModContainer {
 
-    public static final String MODID = "NettyPatch";
-    public static final String NAME = "NettyPatch";
-    public static final String VERSION = "GRADLETOKEN_VERSION";
-
-    @Instance(MODID)
-    public static NettyPatch instance;
-
-    @EventHandler
-    public synchronized void preInit(final FMLPreInitializationEvent e) {
-        logger = e.getModLog();
-        Logger.INFO("Loading " + NAME + " - v" + VERSION);
+    public NettyPatch() {
+        super(new ModMetadata());
+        final ModMetadata meta = this.getMetadata();
+        meta.modId = Tags.MODID;
+        meta.name = Tags.MODNAME;
+        meta.version = Tags.VERSION;
+        meta.credits = "Roll Credits ...";
+        meta.authorList = Collections.singletonList("LunarLaurus");
+        meta.description = "Makes Netty a bit safer.";
+        meta.screenshots = new String[0];
     }
 
+    @Override
+    public boolean registerBus(EventBus bus, LoadController controller) {
+        bus.register(this);
+        return true;
+    }
 }
